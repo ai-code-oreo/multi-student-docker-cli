@@ -4,6 +4,44 @@ A simple command-line tool for managing Docker Compose projects in educational e
 
 ## 🚀 Quick Start
 
+==========================================================================
+common services:
+--------------------------------------------------------------------------
+git clone https://github.com/lee-liao/multi-student-docker-cli.git
+cd multi-student-docker-cli
+python3 cli-tool/cli.py create-project common --template common
+
+cd dockeredServices/common
+./setup.sh
+
+
+
+
+
+
+
+
+
+
+# docker-compose up -d --build
+=========================================================================
+backend with correct ports in .env:
+--------------------------------------------------------------------------
+source .venv/bin/activate
+uvicorn app.main:app --host 0.0.0.0 --port 8004 --reload --log-level debug
+=========================================================================
+frontend:
+--------------------------------------------------------------------------
+npm run dev -- --port 3004
+
+
+
+
+
+############
+# pull update from github
+git pull  #get update
+
 ### 1. Check Your Port Assignment
 `ash
 python cli-tool/cli.py show-ports
